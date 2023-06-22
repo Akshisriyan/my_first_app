@@ -28,7 +28,48 @@ class CalculatorAPPState extends State<CalculatorAPP> {
           //buttons area
 
           Row(
-            children: [button(text: "AC"), button(text: "<")],
+            children: [
+              button(text: "AC"),
+              button(text: "<"),
+              button(text: "", buttonBgColor: Color.fromARGB(0, 0, 0, 0)),
+              button(text: "/")
+            ],
+          ),
+
+          Row(
+            children: [
+              button(text: "7"),
+              button(text: "8"),
+              button(text: "9"),
+              button(text: "*")
+            ],
+          ),
+
+          Row(
+            children: [
+              button(text: "4"),
+              button(text: "5"),
+              button(text: "6"),
+              button(text: "/")
+            ],
+          ),
+
+          Row(
+            children: [
+              button(text: "1"),
+              button(text: "2"),
+              button(text: "3"),
+              button(text: "+")
+            ],
+          ),
+
+          Row(
+            children: [
+              button(text: "%"),
+              button(text: "0"),
+              button(text: "."),
+              button(text: "=")
+            ],
           )
         ],
       ),
