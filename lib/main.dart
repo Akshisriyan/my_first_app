@@ -50,9 +50,13 @@ class CalculatorAPPState extends State<CalculatorAPP> {
         }
 
         inout = output;
+        hideInput = true;
+        outputSize = 52.0;
       }
     } else {
       inout = inout + value;
+      hideInput = false;
+      outputSize = 34.0;
     }
 
     setState(() {
@@ -77,7 +81,7 @@ class CalculatorAPPState extends State<CalculatorAPP> {
                       Container(
                         alignment: Alignment.centerRight,
                         child: Text(
-                          inout,
+                          hideInput ? '' : inout,
                           style: TextStyle(
                             fontSize: 60,
                             fontWeight: FontWeight.bold,
@@ -92,7 +96,7 @@ class CalculatorAPPState extends State<CalculatorAPP> {
                         child: Text(
                           output,
                           style: TextStyle(
-                            fontSize: 30,
+                            fontSize: outputSize,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
